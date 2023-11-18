@@ -1,0 +1,12 @@
+{
+  "name": "react-pwa-initializr",
+  "version": "0.1.0",
+  "description": "Simple react app initializr for PWA apps.",
+  "main": "index.js",
+  "scripts": {
+  },
+  "bin": {
+    "reac-pwa-initializr" : "./index.js"
+  },
+  "author": "mujdecisy"
+}
