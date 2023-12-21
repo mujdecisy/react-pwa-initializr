@@ -1,20 +1,19 @@
 import { Action, Dispatch, configureStore } from "@reduxjs/toolkit";
 import pageReducer from "./slicePage";
 
+const KEY_LOCALSTORAGE = "app-state-<<projectNameKebab>>"
+
 const localStorageMiddleware = ({ getState }: { getState: () => any }) => {
   return (next: Dispatch) => (action: Action) => {
     const result = next(action);
-    localStorage.setItem("applicationState", JSON.stringify(getState()));
+    localStorage.setItem(KEY_LOCALSTORAGE, JSON.stringify(getState()));
     return result;
   };
 };
 
 const reHydrateStore = () => {
   let strJson = "{}";
-
-  if (typeof window !== "undefined") {
-    strJson = localStorage.getItem("applicationState") || "{}";
-  }
+  strJson = localStorage.getItem(KEY_LOCALSTORAGE) || "{}";
   return JSON.parse(strJson);
 };
 

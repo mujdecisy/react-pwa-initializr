@@ -7,7 +7,8 @@ export default function Main() {
     useEffect(()=>{
         dispatch(updatePageState({
             navItems: [
-                {icon: "Info", link: "./about"}
+                {icon: "Info", link: "./about"},
+                {icon: "ImportExport", link: "./importexport"}
             ],
             title: ""
         }));

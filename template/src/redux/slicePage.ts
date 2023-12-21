@@ -1,4 +1,4 @@
-import { INavItem } from "../components/Layout";
+import { INavItem } from "../components/mulayout";
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 import { APP_NAME } from "../utils/constants";
