@@ -50,3 +50,9 @@ fs.rename(
   path.join(projectRootPath, ".gitignore"),
   () => {}
 );
+
+fs.rename(
+  path.join(projectRootPath, "github"),
+  path.join(projectRootPath, ".github"),
+  () => {}
+);
