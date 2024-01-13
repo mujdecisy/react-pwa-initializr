@@ -1,7 +1,7 @@
 import { Action, Dispatch, configureStore } from "@reduxjs/toolkit";
 import pageReducer from "./slicePage";
 
-const KEY_LOCALSTORAGE = "app-state-<<projectNameKebab>>"
+export const KEY_LOCALSTORAGE = "app-state-<<projectNameKebab>>"
 
 const localStorageMiddleware = ({ getState }: { getState: () => any }) => {
   return (next: Dispatch) => (action: Action) => {
