@@ -51,9 +51,9 @@ export default function MuImportExport() {
 
       <MuTakoz/>
       <Button className="w-full" variant="contained" onClick={()=>{
-        localStorage.setItem("applicationState", appData);
+        localStorage.setItem(KEY_LOCALSTORAGE, appData);
         sessionStorage.clear()
-        window.location.href = "/pwa-progress"
+        window.location.href = ROUTE_PREFIX
       }}>
         Save
       </Button>
